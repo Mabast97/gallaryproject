@@ -1,0 +1,96 @@
+.all{
+    background-image: url(../image/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mm{
+    padding: 20px;
+}
+
+.col-md-6 img{
+    height: 100%;
+    width: 100%;
+}
+
+form{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+form input, form textarea{
+    width: 90%;
+    font-size: 0.8em;
+    border: none;
+    outline: none;
+    border-bottom: 5px solid lightgray;
+    border-left: 5px solid lightgray;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+label{
+    color: black;
+}
+
+form textarea{
+    height: 100px;
+    resize: none;
+}
+
+form button{
+    border: none;
+    border-radius: 15px;
+}
+
+form button:hover{
+    animation: anim 1.1s linear 0.2s;
+}
+
+@keyframes anim{
+    25%{width:20%;}
+    50%{width:40%;}
+    75%{width:60%;}
+    100%{width:90%;}
+}
+
+.send{
+    width:90%;
+    height: 40px;
+}
+
+.links{
+    margin: 0 auto;
+    color: white;
+    font-size: 2.5em;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    padding-right: 20px;
+}
+
+.fa-facebook-f:hover{
+    color: #3b579d;
+}
+
+.fa-twitter:hover{
+    color: #55adee;
+}
+
+.fa-instagram:hover{
+    color: orange;
+}
+
+.fa-linkedin-in:hover{
+    color: #007bb5;
+}
+
+.fa-google-plus-g:hover{
+    color: #dd4e40;
+}

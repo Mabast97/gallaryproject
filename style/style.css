@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: lightgrey;
+}
+
+.mySlide{
+    margin: 2% auto;
+    width: 100%;
+    height: 400px;
+    background-image: url(../image/4.jpeg);
+    animation: sliding 20s infinite;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    border: 2px solid lightgray;
+}
+
+@keyframes sliding{
+    25%{
+        background-image: url(../image/6.jpeg);
+    }
+    50%{
+        background-image: url(../image/lake.png);
+    }
+    75%{
+        background-image: url(../image/3.jpg);
+    }
+    100%{
+        background-image: url(../image/1.jpeg);
+    }
+}
+
+#allImages{
+    column-count: 3;
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 735px)
+{
+    #allImages{
+        column-count: 2;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    #allImages{
+        column-count: 1;
+        width: 100%;
+    }
+}
+
+#allImages div{
+    margin: 10px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#open{
+    color: white;
+    font-size: 1.4em;
+}
+
+#open:hover{
+    cursor: pointer;
+}
+
+.navbar-brand{
+    color: whitesmoke;
+    font-size: 1.8em;
+}
+
+.navbar-brand:hover{
+    cursor: pointer;
+    color: lightcyan;
+    transform: rotate(25deg);
+    transition: transform 0.5s;
+}
+
+
+#myform
+{
+    background-color: rgb(240, 238, 238);
+    color: white;
+    font-size: 1.2em;
+    max-width: 85%;
+    margin-left: auto; margin-right: auto;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    padding-top: 5px;
+}
+
+#myform
+{
+    background-color: rgb(240, 238, 238);
+    color: white;
+    font-size: 1.2em;
+    max-width: 75%;
+    margin-left: auto; margin-right: auto;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+#myform input, #myform textarea
+{
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    border-bottom: 7px solid gray;
+    border-left: 7px solid gray;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#myform input:focus, #myform textarea:focus
+{
+    background-color: lightgoldenrodyellow;
+    border-radius: 18px;
+    transition: all 0.4s linear;
+}
+
+.b1{
+    width: 75px; height: 35px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.b2{
+    width: 90px; height: 50px;
+}
+
+.b3{
+    width: 75px; height: 35px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#parallax1{
+    background-image: url(../image/5.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;  height: 500px;
+}
+
+#parallax2{
+    background-image: url(../image/1.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;  height: 500px;
+}

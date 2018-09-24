@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/editing.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <nav class="nav navbar bg-dark fixed-nav sticky-top">
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="../index.html">Home</a>
+          <a href="editing.html">Editing</a>
+          <a href="../dashboard/contact.html">Contact Us</a>
+          <a href="../dashboard/about.html">About Us</a>
+        </div>
+        <!-- Use any element to open the sidenav -->
+        <i onclick="openNav()" class="fas fa-bars" id="open"></i>
+        <a class="navbar-brand pull-right" href="../index.html">Gallary</a>
+    </nav>
+
+    <div class="container-fluid">
+      
+        <div id="myform">
+                <form id="create-form">
+                    <input type="text" id="title" placeholder="Title ..." required>
+                    <input type="text" id="categoryID" placeholder="CategoryID ..." required>
+                    <input id="description" placeholder="Description ..." required>
+                    <input id="date" type="date" placeholder="Date of the Image That Taken ..." required />
+                    <input id="urlImage" type="url" required placeholder="Your URL Here ..." />
+                    <button type="button" id="uploadButton" class="btn btn-success btn-block btn-lg size">Upload</button>
+                </form>
+        </div>
+
+        </div> <!-- container-fluid -->
+
+        <div id="parralax">
+                <table class="table table-striped table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>id</th>
+                                <th>Title</th>
+                                <th>Category ID</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+        </div>
+        <img src="../image/lake.png" class="img-responsive" style="width:100%; height:700px;"/>
+        <div id="parralax2"></div>
+        <img src="../image/4AJlm1uP07LKp99rDauEQXbrrnqHYW6gIuq9Ovum.jpeg" class="img-responsive" style="width:100%; height:700px;"/>
+        <div id="parralax3"></div>
+        <img src="../image/edit.jpeg" class="img-responsive" style="width:100%; height:700px;"/>
+        <div id="parralax4"></div>
+        <img src="../image/1.jpeg" class="img-responsive" style="width:100%; height:700px;"/>
+        <div id="parralax5"></div>
+        <div id="parralax6"></div>
+        <div id="parralax7"></div>
+        <div id="parralax8"></div>
+
+
+
+
+
+        <footer class="footer">
+          <p>Copyright &copy; 2018 Gallary </p>
+        </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+
+
+    <script src="../script/editing.js"></script>
+    <script src="../script/script.js"></script>
+</body>
+</html>
