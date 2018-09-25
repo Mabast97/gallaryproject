@@ -134,6 +134,7 @@ $.ajax({
 });
 
 function nature(){
+    $('#allImages').html('');
     $.ajax({
         url: 'http://localhost:3000/photos',
         method: 'GET',
@@ -142,10 +143,9 @@ function nature(){
         {     
             for(let i=0; i<response.length; i++)
             {
-                if (response[i].categoryId == 1)
+                if (response[i].categoryId === 1)
                 {
                     console.log('yes');
-                    $('#allImages').html('');
                     let bEdit = $('<button>').html('Edit').addClass('btn btn-secondary btn-outline-primary');
             let bDelete = $('<button>').html('Delete').addClass('btn btn-secondary btn-danger margin');
             bDelete.on('click', () => {
@@ -191,6 +191,7 @@ function nature(){
 }
 
 function study(){
+    $('#allImages').html('');
     $.ajax({
         url: 'http://localhost:3000/photos',
         method: 'GET',
@@ -199,10 +200,9 @@ function study(){
         {     
             for(let i=0; i<response.length; i++)
             {
-                if (response[i].categoryId == 3)
+                if (response[i].categoryId === 3)
                 {
                     console.log('yes');
-                    $('#allImages').html('');
                     let bEdit = $('<button>').html('Edit').addClass('btn btn-secondary btn-outline-primary');
             let bDelete = $('<button>').html('Delete').addClass('btn btn-secondary btn-danger margin');
             bDelete.on('click', () => {
@@ -248,6 +248,7 @@ function study(){
 }
 
 function flower(){
+    $('#allImages').html('');
     $.ajax({
         url: 'http://localhost:3000/photos',
         method: 'GET',
@@ -256,10 +257,9 @@ function flower(){
         {     
             for(let i=0; i<response.length; i++)
             {
-                if (response[i].categoryId == 4)
+                if (response[i].categoryId === 4)
                 {
                     console.log('yes');
-                    $('#allImages').html('');
                     let bEdit = $('<button>').html('Edit').addClass('btn btn-secondary btn-outline-primary');
             let bDelete = $('<button>').html('Delete').addClass('btn btn-secondary btn-danger margin');
             bDelete.on('click', () => {
@@ -304,7 +304,9 @@ function flower(){
     });
 }
 
-function all(){
+$("#all").on("click",() => {
+    console.log('alll')
+    $('#allImages').html('');
     console.log('hi');
     $.ajax({
         url: 'http://localhost:3000/photos',
@@ -333,25 +335,25 @@ function all(){
                         response[i].description = inputsArray[2].value;
                         response[i].date = inputsArray[3].value;
                         response[i].url = inputsArray[4].value;
-        
+                        
                         axios.put('http://localhost:3000/photos/'+response[i].id, response[i]);
                         saveButton.remove();
                         $("input").val("")
-                        });  
+                    });  
                 });
-    
-    
-    
+                
+                
+                
                 $('#allImages').append(`<div class="card-deck">
                 <div class="card" id="row-${i}">
-                  <img class="card-img-top" src="${response[i].url}" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">${response[i].title}</h5>
-                    <p class="card-text">${response[i].description}</p>
-                  </div>
+                <img class="card-img-top" src="${response[i].url}" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">${response[i].title}</h5>
+                <p class="card-text">${response[i].description}</p>
+                </div>
                 </div>
                 </div>`).find(`#row-${i}`).append([bEdit, bDelete]);
             }        
         } 
     });
-}
+});
